@@ -38,7 +38,7 @@ class maze:
 				possible += self.get_possible_moves(t)
 
 			
-			print(possible)
+			# print(possible)
 
 
 	def get_possible_moves(self, c):
@@ -124,7 +124,6 @@ def get_min_steps(mat, start, end):
 	m = maze(mat, start, end)
 	m.dijkstra()
 
-	print (m.count)
 	return m.index_count_mat(end)
 
 
@@ -141,4 +140,10 @@ mat = [[0, 0, 0, 0],
 
 
 print(get_min_steps(mat, (3,0), (0,0)))
-#assert get_min_steps(mat, (3,0), (0,0)) == 7
+assert get_min_steps(mat, (3,0), (0,0)) == 7
+assert get_min_steps(mat, (3,0), (0,3)) == 6
+assert get_min_steps(mat, (2,0), (3,3)) == 4
+
+
+
+
